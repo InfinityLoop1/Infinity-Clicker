@@ -1,6 +1,6 @@
 let points = 0;
   
-  document.getElementById('button').onclick = () => {
+  document.getElementById('clickbutton').onclick = () => {
     points = points + 1;
     document.getElementById('pointcounter').innerText = points;
 };
