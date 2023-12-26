@@ -35,7 +35,16 @@ body {
   text-align: center;
   transform: translate(0, -200px);
 }
-
+.upgcontainer {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  background-color: #303030;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translate(0px, -10px);
+  padding: 10px;
+}
 p, div, .upg, #score, #button {
   /* make it so people cannot select text */
   -webkit-touch-callout: none;
