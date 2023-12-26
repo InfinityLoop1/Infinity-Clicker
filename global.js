@@ -7,7 +7,9 @@ let cpc = 1;
   };
 
   document.getElementById('upgcpc').onclick = () => {
-    points = points - (cpc * 2);
-    cpc = cpc + 1;
-    document.getElementById('score').innerText = points;
+    if (points >= points - (cpc * 2)) {
+      points = points - (cpc * 2);
+      cpc = cpc + 1;
+      document.getElementById('score').innerText = points;
+    }
   };
