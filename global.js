@@ -32,7 +32,7 @@ function autoclick() {
 }
 
 function update() {
-  document.getElementById('score').innerText = abbrNum(5000,2);
+  document.getElementById('score').innerText = abbrNum(5000);
   document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + (cpc * 2);
   document.getElementById('upgcps').innerText = "Upgrade CPS: $" + ((cps * 5) + 10);
 }
@@ -41,37 +41,19 @@ function update() {
 
 
 //abbreviate
-const abbrNum = (number, decPlaces) => {
-  // 2 decimal places => 100, 3 => 1000, etc
-  decPlaces = Math.pow(10, decPlaces);
-
-  // Enumerate number abbreviations
-  var abbrev = ["k", "m", "b", "t"];
-
-  // Go through the array backwards, so we do the largest first
-  for (var i = abbrev.length - 1; i >= 0; i--) {
-    // Convert array index to "1000", "1000000", etc
-    var size = Math.pow(10, (i + 1) * 3);
-
-    // If the number is bigger or equal do the abbreviation
-    if (size <= number) {
-      // Here, we multiply by decPlaces, round, and then divide by decPlaces.
-      // This gives us nice rounding to a particular decimal place.
-      number = Math.round((number * decPlaces) / size) / decPlaces;
-
-      // Handle special case where we round up to the next abbreviation
-      if (number == 1000 && i < abbrev.length - 1) {
-        number = 1;
-        i++;
-      }
-
-      // Add the letter for the abbreviation
-      number += abbrev[i];
-
-      // We are done... stop
-      break;
-    }
+function abbrNum(number) {
+  if (number < 0) {
+    return "-" + abbrNum(-1 * number);
   }
-
-  return number;
-};
+  if (number < 1000) {
+    return number;
+  } else if (number >= 1000 && number < 1_000_000) {
+    return (number / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+  } else if (number >= 1_000_000 && number < 1_000_000_000) {
+    return (number / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
+  } else if (number >= 1_000_000_000 && number < 1_000_000_000_000) {
+    return (number / 1_000_000_000).toFixed(1).replace(/\.0$/, "") + "B";
+  } else if (number >= 1_000_000_000_000 && number < 1_000_000_000_000_000) {
+    return (number / 1_000_000_000_000).toFixed(1).replace(/\.0$/, "") + "T";
+  }
+}
