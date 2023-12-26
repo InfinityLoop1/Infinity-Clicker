@@ -46,7 +46,7 @@ const abbrNum = (number, decPlaces) => {
   decPlaces = Math.pow(10, decPlaces);
 
   // Enumerate number abbreviations
-  var abbrev = ['k', 'm', 'b', 't'];
+  var abbrev = ["k", "m", "b", "t"];
 
   // Go through the array backwards, so we do the largest first
   for (var i = abbrev.length - 1; i >= 0; i--) {
@@ -75,5 +75,3 @@ const abbrNum = (number, decPlaces) => {
 
   return number;
 };
-
-
