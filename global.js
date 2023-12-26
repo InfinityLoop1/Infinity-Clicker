@@ -34,7 +34,7 @@ function autoclick() {
 function update() {
   document.getElementById('score').innerText = points;
   document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + (cpc * 2);
-  document.getElementById('upgcps').innerText = "Upgrade CPS: $" + (cps * 5) + 10;
+  document.getElementById('upgcps').innerText = "Upgrade CPS: $" + ((cps * 5) + 10);
 }
 
 
