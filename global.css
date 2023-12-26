@@ -11,8 +11,6 @@ body {
   width: 200px;
   height: 200px;
   text-align: center;
-  display: flex;
-  align-items: center;
 }
 #button {
   background-color: cyan;
