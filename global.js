@@ -32,7 +32,7 @@ function autoclick() {
 }
 
 function update() {
-  document.getElementById('score').innerText = abbrNum(points,2);
+  document.getElementById('score').innerText = abbrNum(5000,2);
   document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + (cpc * 2);
   document.getElementById('upgcps').innerText = "Upgrade CPS: $" + ((cps * 5) + 10);
 }
