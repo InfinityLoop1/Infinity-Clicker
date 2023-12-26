@@ -1,6 +1,7 @@
-let counter = 0;
+let points = 0;
+let cpc = 1;
   
   document.getElementById('button').onclick = () => {
-    counter = counter + 1;
-    document.getElementById('score').innerText = counter;
+    points = points + cpc;
+    document.getElementById('score').innerText = points;
   };
