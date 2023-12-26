@@ -1,5 +1,6 @@
 let points = 0;
 let cpc = 1;
+update();
   
 document.getElementById('button').onclick = () => {
   points = points + cpc;
