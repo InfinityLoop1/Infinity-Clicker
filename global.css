@@ -8,9 +8,7 @@ body {
 .clickcontainer {
   width: 200px;
   height: 200px;
-  display: flex;
-  justify-content: center;
-  /*align-content: normal;*/
+  text-align: center;
 }
 #button {
   background-color: cyan;
