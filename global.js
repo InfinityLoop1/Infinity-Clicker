@@ -18,7 +18,7 @@ document.getElementById('upgcpc').onclick = () => {
   }
 };
 
-document.getElementById('upgcpc').onclick = () => {
+document.getElementById('upgcps').onclick = () => {
   if (points >= (cps * 5) + 10) {
     points = points - (cps * 5) + 10;
     cps = cps + 0.5;
