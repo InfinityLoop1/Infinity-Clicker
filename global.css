@@ -19,6 +19,10 @@ body {
   border-radius: 50%;
   margin: auto;
 }
-#score {
-  
+.upgrade {
+  background-color: cyan;
+  width: 200px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
 }
