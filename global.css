@@ -29,7 +29,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
-  transform: translate(0, -100px);
+  transform: translate(0, -200px);
 }
 
 p, div, .upg, #score, #button {
