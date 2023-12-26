@@ -9,6 +9,9 @@ body {
   width: 200px;
   height: 200px;
   text-align: center;
+  background-color: #303030;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 #button {
   background-color: cyan;
