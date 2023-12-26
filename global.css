@@ -17,6 +17,9 @@ body {
   border-radius: 50%;
   margin: auto;
 }
+#counter {
+  font-size: 50px;
+}
 .upg {
   background-color: #505050;
   width: 200px;
