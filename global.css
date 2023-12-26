@@ -10,8 +10,9 @@ body {
   height: 200px;
   text-align: center;
   background-color: #303030;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translate(-20px, -20px);
 }
 #button {
   background-color: cyan;
