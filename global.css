@@ -7,15 +7,6 @@ body {
   display: flex;
   gap: 15px;
 }
-.clickcontainer {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  background-color: #303030;
-  border-bottom-right-radius: 20px;
-  transform: translate(-10px, -10px);
-  padding: 10px;
-}
 #button {
   background-color: cyan;
   width: 100px;
@@ -25,6 +16,17 @@ body {
 }
 #score {
   font-size: 30px;
+}
+#container {
+  height: 100%;
+  text-align: center;
+  background-color: #303030;
+  padding: 10px;
+}
+.clickcontainer {
+  width: 300px;
+  border-bottom-right-radius: 20px;
+  transform: translate(-10px, -10px);
 }
 .upg {
   background-color: #505050;
@@ -38,13 +40,9 @@ body {
 }
 .upgcontainer {
   width: 300px;
-  height: 200px;
-  text-align: center;
-  background-color: #303030;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
-  padding: 10px;
 }
 p, div, .upg, #score, #button {
   /* make it so people cannot select text */
