@@ -23,6 +23,6 @@ body {
   background-color: cyan;
   width: 200px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 2px;
   margin: auto;
 }
