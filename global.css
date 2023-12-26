@@ -7,12 +7,9 @@ body {
 
   display: flex;
   gap: 15px;
-  justify-items: center;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .clickcontainer {
   width: 300px;
