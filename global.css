@@ -9,6 +9,7 @@ body {
   width: 200px;
   height: 200px;
   text-align: center;
+  transform: translate(0, -50%);
 }
 #button {
   background-color: cyan;
