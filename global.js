@@ -5,3 +5,9 @@ let cpc = 1;
     points = points + cpc;
     document.getElementById('score').innerText = points;
   };
+
+  document.getElementById('upgcpc').onclick = () => {
+    points = points - (cpc * 2);
+    cpc = cpc + 1;
+    document.getElementById('score').innerText = points;
+  };
