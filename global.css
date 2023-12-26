@@ -3,9 +3,19 @@
 body {
   font-family: 'Orbitron', sans-serif;
 }
+.clickcontainer {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  /*align-content: normal;*/
+}
 #button {
   background-color: cyan;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+}
+#score {
+  
 }
