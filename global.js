@@ -13,27 +13,27 @@ if (played === "true") {
   if (isNaN(points)) {
     points = 0;
   }
-  
+
   cpc = parseFloat(window.localStorage.getItem("cpc"));
   if (isNaN(cpc)) {
     cpc = 1;
   }
-  
+
   cps = parseFloat(window.localStorage.getItem("cps"));
   if (isNaN(cps)) {
     cps = 0;
   }
-  
+
   clicks = parseFloat(window.localStorage.getItem("clicks"));
   if (isNaN(clicks)) {
     clicks = 0;
   }
-  
+
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
   if (isNaN(clicks)) {
     clicks = 0;
   }
-  
+
   presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
   if (isNaN(presshopcost)) {
     presshopcost = 0;
@@ -49,8 +49,8 @@ function abbrNum(number) {
 
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
-  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + ((cpc * 2) - presshopcost);
-  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + ((cps * 5 + 10) - presshopcost);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - presshopcost);
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10 - presshopcost);
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
@@ -80,23 +80,23 @@ document.getElementById("button").onclick = () => {
 };
 
 document.getElementById("upgcpc").onclick = () => {
-  if (points >= (cpc * 2) - presshopcost) {
-    points = points - (cpc * 2) - presshopcost;
+  if (points >= cpc * 2 - presshopcost) {
+    points = points - cpc * 2 - presshopcost;
     cpc = cpc + 1;
     update();
   }
 };
 
 document.getElementById("upgcps").onclick = () => {
-  if (points >= (cps * 5 + 10) - presshopcost) {
-    points = points - ((cps * 5 + 10) - presshopcost);
+  if (points >= cps * 5 + 10 - presshopcost) {
+    points = points - (cps * 5 + 10 - presshopcost);
     cps = cps + 0.5;
     update();
   }
 };
 
 document.getElementById("presbuttshop").onclick = () => {
-  presshopcost += (points / 1000);
+  presshopcost += points / 1000;
   points = 0;
   cpc = 1;
   cps = 0;
