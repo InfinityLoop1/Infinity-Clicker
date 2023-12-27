@@ -1,5 +1,5 @@
 let played = window.localStorage.played;
-if (played = true) {
+if (played == true) {
   let points = window.localStorage.getItem("points");
   let cpc = window.localStorage.getItem("cpc");
   let cps = window.localStorage.getItem("cps");
