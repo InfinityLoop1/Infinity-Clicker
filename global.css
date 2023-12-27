@@ -8,11 +8,24 @@ body {
   gap: 15px;
 }
 #button {
-  background-color: cyan;
+  --1: #149CEA;
+  --2: #2a75a1;
+  --3: #2e5a7390;
+  cursor: pointer;
   width: 100px;
   height: 100px;
+  background: var(--1);
+  border: 2px solid var(--2);
   border-radius: 50%;
+  box-shadow: 0 4px 0 var(--2);
+  transition: all .1s ease;
+  filter: drop-shadow(0 15px 20px var(--3));
   margin: auto;
+}
+
+#button:active {
+  transform: translateY(8px);
+  box-shadow: 0 0 0 var(--3);
 }
 #score {
   font-size: 30px;
