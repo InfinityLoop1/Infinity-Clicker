@@ -7,7 +7,8 @@ let secondsplayed = 0;
 
 // Check for played status and retrieve values
 let played = window.localStorage.getItem("played");
-if( played === "true" )
+let points = window.localStorage.getItem("points");
+if( played === "true" && points !=== "NaN" )
 {
     points = parseInt(window.localStorage.getItem("points"));
     cpc = parseInt(window.localStorage.getItem("cpc"));
