@@ -8,16 +8,15 @@ let secondsplayed = 0;
 // Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
 let played = window.localStorage.getItem("played");
 points = window.localStorage.getItem("points");
-if( played === "true" && points !== "NaN" )
-{
-    points = parseFloat(window.localStorage.getItem("points"));
-    cpc = parseFloat(window.localStorage.getItem("cpc"));
-    cps = parseFloat(window.localStorage.getItem("cps"));
-    clicks = parseFloat(window.localStorage.getItem("clicks"));
-    secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
+if (played === "true" && points !== "NaN") {
+  points = parseFloat(window.localStorage.getItem("points"));
+  cpc = parseFloat(window.localStorage.getItem("cpc"));
+  cps = parseFloat(window.localStorage.getItem("cps"));
+  clicks = parseFloat(window.localStorage.getItem("clicks"));
+  secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
 } else {
-    window.localStorage.setItem("played", "true");
-    points = 0;
+  window.localStorage.setItem("played", "true");
+  points = 0;
 }
 
 function abbrNum(number) {
@@ -28,11 +27,14 @@ function abbrNum(number) {
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
-  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
+  document.getElementById("upgcps").innerText =
+    "Upgrade CPS: $" + (cps * 5 + 10);
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
-  document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
-  document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
+  document.getElementById("clicksstat").innerText =
+    "Clicks: " + abbrNum(clicks);
+  document.getElementById("secondsstat").innerText =
+    "Seconds played: " + abbrNum(secondsplayed);
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
