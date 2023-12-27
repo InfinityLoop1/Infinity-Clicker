@@ -44,12 +44,12 @@ body {
 .upg, .prestigebutton {
   background-color: #505050;
   width: 250px;
-  /*height: 25px;*/
   border-radius: 2px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  padding: 10px;
 }
 .upgcontainer, .statscontainer, .prestigecontainer {
   width: 300px;
