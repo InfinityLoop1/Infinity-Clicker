@@ -50,7 +50,7 @@ body {
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
 }
-p, div, .upg, #score, #button {
+h1, h2, h3, h4, h5, h6, a, p, div, .upg, #score, #button {
   /* make it so people cannot select text */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
