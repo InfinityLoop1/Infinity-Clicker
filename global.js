@@ -18,8 +18,6 @@ window.localStorage.getItem("played")
       window.localStorage.setItem("played", "true");
     }
 
-    /
-
 function abbrNum(number) {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
   return formatter.format(number);
