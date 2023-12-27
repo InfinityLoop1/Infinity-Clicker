@@ -17,6 +17,7 @@ if( played === "true" && points !== "NaN" )
     secondsplayed = parseInt(window.localStorage.getItem("secondsplayed"));
 } else {
     window.localStorage.setItem("played", "true");
+    points = 0;
 }
 
 function abbrNum(number) {
