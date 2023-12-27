@@ -1,6 +1,8 @@
 let points = 0;
 let cpc = 1;
 let cps = 0;
+let clicks = 0;
+let secondsplayed = 0;
 
 function abbrNum(number) {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
@@ -11,10 +13,15 @@ function update() {
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
   document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
+  document.getElementById("cpcstat").innerText = "CPC: " + cpc;
+  document.getElementById("cpcstat").innerText = "CPS: " + cps;
+  document.getElementById("clicksstat").innerText = "Clicks: " + clicks;
+  document.getElementById("secondsstat").innerText = "Seconds played: " + secondsplayed;
 }
 
 function autoclick() {
   points = points + cps;
+  secondsplayed++;
   update();
 }
 
@@ -24,6 +31,7 @@ setInterval(autoclick, 1000);
 
 document.getElementById("button").onclick = () => {
   points = points + cpc;
+  clicks++;
   update();
 };
 
