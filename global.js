@@ -6,9 +6,8 @@ let clicks = 0;
 let secondsplayed = 0;
 
 // Check for played status and retrieve values
-window.localStorage
-    .getItem("played")
-    .then((played) => {
+window.localStorage.getItem("played")
+  .then((played) => {
     if (played === "true") {
       points = parseInt(window.localStorage.getItem("points"));
       cpc = parseInt(window.localStorage.getItem("cpc"));
@@ -19,61 +18,60 @@ window.localStorage
       window.localStorage.setItem("played", "true");
     }
 
-    function abbrNum(number) {
-      const formatter = Intl.NumberFormat("en", { notation: "compact" });
-      return formatter.format(number);
-    }
+    /
 
-    function update() {
-      document.getElementById("score").innerText = abbrNum(points);
-      document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
-      document.getElementById("upgcps").innerText =
-        "Upgrade CPS: $" + (cps * 5 + 10);
-      document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
-      document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
-      document.getElementById("clicksstat").innerText =
-        "Clicks: " + abbrNum(clicks);
-      document.getElementById("secondsstat").innerText =
-        "Seconds played: " + abbrNum(secondsplayed);
+function abbrNum(number) {
+  const formatter = Intl.NumberFormat("en", { notation: "compact" });
+  return formatter.format(number);
+}
 
-      window.localStorage.setItem("points", points);
-      window.localStorage.setItem("cpc", cpc);
-      window.localStorage.setItem("cps", cps);
-      window.localStorage.setItem("clicks", clicks);
-      window.localStorage.setItem("secondsplayed", secondsplayed);
-    }
+function update() {
+  document.getElementById("score").innerText = abbrNum(points);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
+  document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
+  document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
+  document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
+  document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
 
-    function autoclick() {
-      points = points + cps;
-      secondsplayed++;
-      update();
-    }
+  window.localStorage.setItem("points", points);
+  window.localStorage.setItem("cpc", cpc);
+  window.localStorage.setItem("cps", cps);
+  window.localStorage.setItem("clicks", clicks);
+  window.localStorage.setItem("secondsplayed", secondsplayed);
+}
 
+function autoclick() {
+  points = points + cps;
+  secondsplayed++;
+  update();
+}
+
+update();
+
+setInterval(autoclick, 1000);
+
+document.getElementById("button").onclick = () => {
+  points = points + cpc;
+  clicks++;
+  update();
+};
+
+document.getElementById("upgcpc").onclick = () => {
+  if (points >= cpc * 2) {
+    points = points - cpc * 2;
+    cpc = cpc + 1;
     update();
+  }
+};
 
-    setInterval(autoclick, 1000);
-
-    document.getElementById("button").onclick = () => {
-      points = points + cpc;
-      clicks++;
-      update();
-    };
-
-    document.getElementById("upgcpc").onclick = () => {
-      if (points >= cpc * 2) {
-        points = points - cpc * 2;
-        cpc = cpc + 1;
-        update();
-      }
-    };
-
-    document.getElementById("upgcps").onclick = () => {
-      if (points >= cps * 5 + 10) {
-        points = points - (cps * 5 + 10);
-        cps = cps + 0.5;
-        update();
-      }
-    };
+document.getElementById("upgcps").onclick = () => {
+  if (points >= cps * 5 + 10) {
+    points = points - (cps * 5 + 10);
+    cps = cps + 0.5;
+    update();
+  }
+};
   })
   .catch((error) => {
     console.error("Error retrieving values from localStorage:", error);
