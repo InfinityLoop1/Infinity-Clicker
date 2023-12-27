@@ -55,7 +55,6 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
-  document.getElementById("presoutpshop").innerText = (-1 * (points / 1000)) + " cost to shop items);
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
