@@ -1,3 +1,19 @@
+function update() {
+  document.getElementById("score").innerText = abbrNum(points);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
+}
+
+function autoclick() {
+  points = points + cps;
+  update();
+}
+
+function abbrNum(number) {
+  const formatter = Intl.NumberFormat("en", { notation: "compact" });
+  return formatter.format(number);
+}
+
 let points = 0;
 let cpc = 1;
 let cps = 0;
@@ -11,36 +27,17 @@ document.getElementById("button").onclick = () => {
 };
 
 document.getElementById("upgcpc").onclick = () => {
-  if (points >= upgcostcpc) {
-    points = points - upgcostcpc;
+  if (points >= cpc * 2) {
+    points = points - cpc * 2;
     cpc = cpc + 1;
     update();
   }
 };
 
 document.getElementById("upgcps").onclick = () => {
-  if (points >= upgcostcps) {
-    points = points - upgcostcps;
+  if (points >= cps * 5 + 10) {
+    points = points - (cps * 5 + 10);
     cps = cps + 0.5;
     update();
   }
 };
-
-function autoclick() {
-  points = points + cps;
-  update();
-}
-
-function update() {
-  let upgcostcpc = cpc * 2;
-  let upgcostcps = cps * 5 + 10;
-  document.getElementById("score").innerText = abbrNum(points);
-  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + upgcostcpc;
-  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + upgcostcps;
-}
-
-//abbreviate
-function abbrNum(number) {
-  const formatter = Intl.NumberFormat("en", { notation: "compact" });
-  return formatter.format(number);
-}
