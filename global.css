@@ -41,7 +41,7 @@ body {
   border-bottom-right-radius: 20px;
   transform: translate(-10px, -10px);
 }
-.upg {
+.upg, .prestigebutton {
   background-color: #505050;
   width: 200px;
   height: 50px;
