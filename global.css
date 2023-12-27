@@ -43,8 +43,8 @@ body {
 }
 .upg, .prestigebutton {
   background-color: #505050;
-  width: 200px;
-  height: 25px;
+  width: 250px;
+  /*height: 25px;*/
   border-radius: 2px;
   margin: auto;
   margin-top: 10px;
