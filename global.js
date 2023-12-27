@@ -1,11 +1,11 @@
-if (window.localstorage.played = true) {
-  let points = window.localstorage.getItem("points");
-  let cpc = window.localstorage.getItem("cpc");
-  let cps = window.localstorage.getItem("cps");
-  let clicks = window.localstorage.getItem("clicks");
-  let secondsplayed = window.localstorage.getItem("secondsplayed");
+if (window.localStorage.played = true) {
+  let points = window.localStorage.getItem("points");
+  let cpc = window.localStorage.getItem("cpc");
+  let cps = window.localStorage.getItem("cps");
+  let clicks = window.localStorage.getItem("clicks");
+  let secondsplayed = window.localStorage.getItem("secondsplayed");
 } else {
-  window.localstorage.setItem("played", true);
+  window.localStorage.setItem("played", true);
   let points = 0;
   let cpc = 1;
   let cps = 0;
@@ -27,11 +27,11 @@ function update() {
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
 
-  window.localstorage.setItem("points", points);
-  window.localstorage.setItem("cpc", cpc);
-  window.localstorage.setItem("cps", cps);
-  window.localstorage.setItem("clicks", clicks);
-  window.localstorage.setItem("secondsplayed", secondsplayed);
+  window.localStorage.setItem("points", points);
+  window.localStorage.setItem("cpc", cpc);
+  window.localStorage.setItem("cps", cps);
+  window.localStorage.setItem("clicks", clicks);
+  window.localStorage.setItem("secondsplayed", secondsplayed);
 }
 
 function autoclick() {
