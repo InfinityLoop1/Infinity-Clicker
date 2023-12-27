@@ -8,17 +8,38 @@ let presshopcost = 0;
 
 // Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
 let played = window.localStorage.getItem("played");
-points = window.localStorage.getItem("points");
-if (played === "true" && points !== "NaN") {
+if (played === "true") {
   points = parseFloat(window.localStorage.getItem("points"));
+  if (points == "NaN") {
+    points = 0;
+  }
+  
   cpc = parseFloat(window.localStorage.getItem("cpc"));
+  if (cpc == "NaN") {
+    cpc = 1;
+  }
+  
   cps = parseFloat(window.localStorage.getItem("cps"));
+  if (cps == "NaN") {
+    cps = 0;
+  }
+  
   clicks = parseFloat(window.localStorage.getItem("clicks"));
+  if (clicks == "NaN") {
+    clicks = 0;
+  }
+  
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
+  if (clicks == "NaN") {
+    clicks = 0;
+  }
+  
   presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
+  if (presshopcost == "NaN") {
+    presshopcost = 0;
+  }
 } else {
   window.localStorage.setItem("played", "true");
-  points = 0;
 }
 
 function abbrNum(number) {
@@ -28,7 +49,7 @@ function abbrNum(number) {
 
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
-  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2) - presshopcost;
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + ((cpc * 2) - presshopcost);
   document.getElementById("upgcps").innerText = "Upgrade CPS: $" + ((cps * 5 + 10) - presshopcost);
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
