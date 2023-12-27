@@ -11,16 +11,16 @@ document.getElementById('button').onclick = () => {
 };
 
 document.getElementById('upgcpc').onclick = () => {
-  if (points >= upgcost_cpc) {
-    points = points - upgcost_cpc;
+  if (points >= upgcostcpc) {
+    points = points - upgcostcpc;
     cpc = cpc + 1;
     update();
   }
 };
 
 document.getElementById('upgcps').onclick = () => {
-  if (points >= upgcost_cps) {
-    points = points - upgcost_cps;
+  if (points >= upgcostcps) {
+    points = points - upgcostcps;
     cps = cps + 0.5;
     update();
   }
@@ -32,11 +32,11 @@ function autoclick() {
 }
 
 function update() {
-  let upgcost_cpc = (cpc * 2);
-  let upgcost_cps = ((cps * 5) + 10)
+  let upgcostcpc = (cpc * 2);
+  let upgcostcps = ((cps * 5) + 10)
   document.getElementById('score').innerText = abbrNum(points);
-  document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + upgcost_cpc;
-  document.getElementById('upgcps').innerText = "Upgrade CPS: $" + upgcost_cps;
+  document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + upgcostcpc;
+  document.getElementById('upgcps').innerText = "Upgrade CPS: $" + upgcostcps;
 }
 
 //abbreviate
