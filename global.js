@@ -1,8 +1,17 @@
-let points = 0;
-let cpc = 1;
-let cps = 0;
-let clicks = 0;
-let secondsplayed = 0;
+if (localstorage.played) {
+  let points = localstorage.getItem("points");
+  let cpc = localstorage.getItem("cpc");
+  let cps = localstorage.getItem("cps");
+  let clicks = localstorage.getItem("clicks");
+  let secondsplayed = localstorage.getItem("secondsplayed");
+} else {
+  localstorage.setItem("played", true);
+  let points = 0;
+  let cpc = 1;
+  let cps = 0;
+  let clicks = 0;
+  let secondsplayed = 0;
+}
 
 function abbrNum(number) {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
@@ -17,6 +26,12 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
+
+  localStorage.setItem("points", points);
+  localStorage.setItem("cpc", cpc);
+  localStorage.setItem("cps", cps);
+  localStorage.setItem("clicks", clicks);
+  localStorage.setItem("secondsplayed", secondsplayed);
 }
 
 function autoclick() {
