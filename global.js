@@ -10,11 +10,11 @@ let played = window.localStorage.getItem("played");
 points = window.localStorage.getItem("points");
 if( played === "true" && points !== "NaN" )
 {
-    points = window.localStorage.getItem("points");
-    cpc = parseInt(window.localStorage.getItem("cpc"));
+    points = parseFloat(window.localStorage.getItem("points"));
+    cpc = parseFloat(window.localStorage.getItem("cpc"));
     cps = parseFloat(window.localStorage.getItem("cps"));
-    clicks = parseInt(window.localStorage.getItem("clicks"));
-    secondsplayed = parseInt(window.localStorage.getItem("secondsplayed"));
+    clicks = parseFloat(window.localStorage.getItem("clicks"));
+    secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
 } else {
     window.localStorage.setItem("played", "true");
     points = 0;
