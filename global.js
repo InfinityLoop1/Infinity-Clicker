@@ -5,12 +5,12 @@ let cps = 0;
 let clicks = 0;
 let secondsplayed = 0;
 
-// Check for played status and retrieve values
+// Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
 let played = window.localStorage.getItem("played");
 points = window.localStorage.getItem("points");
 if( played === "true" && points !== "NaN" )
 {
-    points = parseInt(window.localStorage.getItem("points"));
+    points = window.localStorage.getItem("points");
     cpc = parseInt(window.localStorage.getItem("cpc"));
     cps = parseFloat(window.localStorage.getItem("cps"));
     clicks = parseInt(window.localStorage.getItem("clicks"));
