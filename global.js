@@ -4,6 +4,7 @@ let cpc = 1;
 let cps = 0;
 let clicks = 0;
 let secondsplayed = 0;
+let presshopcost = 0;
 
 // Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
 let played = window.localStorage.getItem("played");
@@ -14,6 +15,7 @@ if (played === "true" && points !== "NaN") {
   cps = parseFloat(window.localStorage.getItem("cps"));
   clicks = parseFloat(window.localStorage.getItem("clicks"));
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
+  presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
 } else {
   window.localStorage.setItem("played", "true");
   points = 0;
@@ -26,8 +28,8 @@ function abbrNum(number) {
 
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
-  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
-  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2) - presshopcost;
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + ((cps * 5 + 10) - presshopcost);
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
@@ -57,17 +59,24 @@ document.getElementById("button").onclick = () => {
 };
 
 document.getElementById("upgcpc").onclick = () => {
-  if (points >= cpc * 2) {
-    points = points - cpc * 2;
+  if (points >= (cpc * 2) - presshopcost) {
+    points = points - (cpc * 2) - presshopcost;
     cpc = cpc + 1;
     update();
   }
 };
 
 document.getElementById("upgcps").onclick = () => {
-  if (points >= cps * 5 + 10) {
-    points = points - (cps * 5 + 10);
+  if (points >= (cps * 5 + 10) - presshopcost) {
+    points = points - ((cps * 5 + 10) - presshopcost);
     cps = cps + 0.5;
     update();
   }
+};
+
+document.getElementById("presbuttshop").onclick = () => {
+  presshopcost += (points / 1000);
+  points = 0;
+  cpc = 1;
+  cps = 0;
 };
