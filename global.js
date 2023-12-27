@@ -1,17 +1,17 @@
-//if (window.localstorage.played) {
+if (window.localstorage.played = true) {
   let points = window.localstorage.getItem("points");
   let cpc = window.localstorage.getItem("cpc");
   let cps = window.localstorage.getItem("cps");
   let clicks = window.localstorage.getItem("clicks");
   let secondsplayed = window.localstorage.getItem("secondsplayed");
-//} else {
-  //window.localstorage.setItem("played", true);
-  //let points = 0;
-  //let cpc = 1;
-  //let cps = 0;
-  //let clicks = 0;
-  //let secondsplayed = 0;
-//}
+} else {
+  window.localstorage.setItem("played", true);
+  let points = 0;
+  let cpc = 1;
+  let cps = 0;
+  let clicks = 0;
+  let secondsplayed = 0;
+}
 
 function abbrNum(number) {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
