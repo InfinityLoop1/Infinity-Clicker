@@ -51,18 +51,12 @@ body {
   margin-bottom: 10px;
   text-align: center;
 }
-.upgcontainer {
+.upgcontainer, .statscontainer, .prestigecontainer {
   width: 300px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
-}
-.statscontainer {
-  width: 300px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  transform: translate(0px, -10px);
-}
+} 
 body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   /* make it so people cannot select text */
   -webkit-touch-callout: none;
