@@ -10,32 +10,32 @@ let presshopcost = 0;
 let played = window.localStorage.getItem("played");
 if (played === "true") {
   points = parseFloat(window.localStorage.getItem("points"));
-  if (points.isInteger() === false) {
+  if (points == "NaN") {
     points = 0;
   }
   
   cpc = parseFloat(window.localStorage.getItem("cpc"));
-  if (cpc.isInteger() === false) {
+  if (cpc == "NaN") {
     cpc = 1;
   }
   
   cps = parseFloat(window.localStorage.getItem("cps"));
-  if (cps.isInteger() === false) {
+  if (cps == "NaN") {
     cps = 0;
   }
   
   clicks = parseFloat(window.localStorage.getItem("clicks"));
-  if (clicks.isInteger() === false) {
+  if (clicks == "NaN") {
     clicks = 0;
   }
   
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
-  if (clicks.isInteger() === false) {
+  if (clicks == "NaN") {
     clicks = 0;
   }
   
   presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
-  if (presshopcost.isInteger() === false) {
+  if (presshopcost == "NaN") {
     presshopcost = 0;
   }
 } else {
