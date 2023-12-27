@@ -10,32 +10,32 @@ let presshopcost = 0;
 let played = window.localStorage.getItem("played");
 if (played === "true") {
   points = parseFloat(window.localStorage.getItem("points"));
-  if (points > -Infinity) {
+  if (points < -Infinity) {
     points = 0;
   }
   
   cpc = parseFloat(window.localStorage.getItem("cpc"));
-  if (cpc > -Infinity) {
+  if (cpc < -Infinity) {
     cpc = 1;
   }
   
   cps = parseFloat(window.localStorage.getItem("cps"));
-  if (cps > -Infinity) {
+  if (cps < -Infinity) {
     cps = 0;
   }
   
   clicks = parseFloat(window.localStorage.getItem("clicks"));
-  if (clicks > -Infinity) {
+  if (clicks < -Infinity) {
     clicks = 0;
   }
   
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
-  if (clicks > -Infinity) {
+  if (clicks < -Infinity) {
     clicks = 0;
   }
   
   presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
-  if (presshopcost > -Infinity) {
+  if (presshopcost < -Infinity) {
     presshopcost = 0;
   }
 } else {
