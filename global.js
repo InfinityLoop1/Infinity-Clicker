@@ -1,3 +1,12 @@
+let points = 0;
+let cpc = 1;
+let cps = 0;
+
+function abbrNum(number) {
+  const formatter = Intl.NumberFormat("en", { notation: "compact" });
+  return formatter.format(number);
+}
+
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
@@ -9,14 +18,6 @@ function autoclick() {
   update();
 }
 
-function abbrNum(number) {
-  const formatter = Intl.NumberFormat("en", { notation: "compact" });
-  return formatter.format(number);
-}
-
-let points = 0;
-let cpc = 1;
-let cps = 0;
 update();
 
 setInterval(autoclick, 1000);
