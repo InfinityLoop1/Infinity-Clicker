@@ -6,17 +6,17 @@ let clicks = 0;
 let secondsplayed = 0;
 
 // Check for played status and retrieve values
-window.localStorage.getItem("played")
-  .then((played) => {
-    if (played === "true") {
-      points = parseInt(window.localStorage.getItem("points"));
-      cpc = parseInt(window.localStorage.getItem("cpc"));
-      cps = parseFloat(window.localStorage.getItem("cps"));
-      clicks = parseInt(window.localStorage.getItem("clicks"));
-      secondsplayed = parseInt(window.localStorage.getItem("secondsplayed"));
-    } else {
-      window.localStorage.setItem("played", "true");
-    }
+let played = window.localStorage.getItem("played");
+if( played === "true" )
+{
+    points = parseInt(window.localStorage.getItem("points"));
+    cpc = parseInt(window.localStorage.getItem("cpc"));
+    cps = parseFloat(window.localStorage.getItem("cps"));
+    clicks = parseInt(window.localStorage.getItem("clicks"));
+    secondsplayed = parseInt(window.localStorage.getItem("secondsplayed"));
+} else {
+    window.localStorage.setItem("played", "true");
+}
 
 function abbrNum(number) {
   const formatter = Intl.NumberFormat("en", { notation: "compact" });
@@ -70,7 +70,3 @@ document.getElementById("upgcps").onclick = () => {
     update();
   }
 };
-  })
-  .catch((error) => {
-    console.error("Error retrieving values from localStorage:", error);
-  });
