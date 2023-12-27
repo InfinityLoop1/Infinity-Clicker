@@ -4,13 +4,13 @@ let cps = 0;
 update();
 
 setInterval(autoclick, 1000);
-  
-document.getElementById('button').onclick = () => {
+
+document.getElementById("button").onclick = () => {
   points = points + cpc;
   update();
 };
 
-document.getElementById('upgcpc').onclick = () => {
+document.getElementById("upgcpc").onclick = () => {
   if (points >= upgcostcpc) {
     points = points - upgcostcpc;
     cpc = cpc + 1;
@@ -18,7 +18,7 @@ document.getElementById('upgcpc').onclick = () => {
   }
 };
 
-document.getElementById('upgcps').onclick = () => {
+document.getElementById("upgcps").onclick = () => {
   if (points >= upgcostcps) {
     points = points - upgcostcps;
     cps = cps + 0.5;
@@ -32,11 +32,11 @@ function autoclick() {
 }
 
 function update() {
-  let upgcostcpc = (cpc * 2);
-  let upgcostcps = ((cps * 5) + 10);
-  document.getElementById('score').innerText = abbrNum(points);
-  document.getElementById('upgcpc').innerText = "Upgrade CPC: $" + upgcostcpc;
-  document.getElementById('upgcps').innerText = "Upgrade CPS: $" + upgcostcps;
+  let upgcostcpc = cpc * 2;
+  let upgcostcps = cps * 5 + 10;
+  document.getElementById("score").innerText = abbrNum(points);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + upgcostcpc;
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + upgcostcps;
 }
 
 //abbreviate
