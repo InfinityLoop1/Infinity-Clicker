@@ -14,7 +14,7 @@ function update() {
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
   document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
   document.getElementById("cpcstat").innerText = "CPC: " + cpc;
-  document.getElementById("cpcstat").innerText = "CPS: " + cps;
+  document.getElementById("cpsstat").innerText = "CPS: " + cps;
   document.getElementById("clicksstat").innerText = "Clicks: " + clicks;
   document.getElementById("secondsstat").innerText = "Seconds played: " + secondsplayed;
 }
