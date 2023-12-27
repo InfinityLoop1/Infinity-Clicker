@@ -6,8 +6,6 @@ let clicks = 0;
 let secondsplayed = 0;
 
 // Check for played status and retrieve values
-window.localStorage.getItem("played")
-  .then((played) => {
     if (played === "true") {
       points = parseInt(window.localStorage.getItem("points"));
       cpc = parseInt(window.localStorage.getItem("cpc"));
@@ -70,7 +68,3 @@ document.getElementById("upgcps").onclick = () => {
     update();
   }
 };
-  })
-  .catch((error) => {
-    console.error("Error retrieving values from localStorage:", error);
-  });
