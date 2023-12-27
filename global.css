@@ -44,6 +44,12 @@ body {
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
 }
+.statscontainer {
+  width: 300px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translate(0px, -10px);
+}
 p, div, .upg, #score, #button {
   /* make it so people cannot select text */
   -webkit-touch-callout: none;
