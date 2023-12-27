@@ -27,14 +27,11 @@ function abbrNum(number) {
 function update() {
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + cpc * 2;
-  document.getElementById("upgcps").innerText =
-    "Upgrade CPS: $" + (cps * 5 + 10);
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10);
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
-  document.getElementById("clicksstat").innerText =
-    "Clicks: " + abbrNum(clicks);
-  document.getElementById("secondsstat").innerText =
-    "Seconds played: " + abbrNum(secondsplayed);
+  document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
+  document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
