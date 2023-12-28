@@ -107,14 +107,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("presbuttshop").onclick = () => {
-  presshopcost += points / 10000;
+  presshopcost += parseFloat(points / 10000).toFixed(2);
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
 document.getElementById("presbuttboos").onclick = () => {
-  prespercboos += points / 100000;
+  prespercboos += parseFloat(points / 100000).toFixed(2);
   points = 0;
   cpc = 1;
   cps = 0;
