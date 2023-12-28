@@ -7,7 +7,7 @@ let secondsplayed = 0;
 let presshopcost = 0;
 let prespercboos = 1;
 
-// Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
+// First, checks if game has been played. If not, keep original values. If yes, get localStorage values there are no errors with localStorage. If there is an error with locaStorage, the value with the error is reset to default value. If not, value is set to localStorage value.
 let played = window.localStorage.getItem("played");
 if (played === "true") {
   points = parseFloat(window.localStorage.getItem("points"));
