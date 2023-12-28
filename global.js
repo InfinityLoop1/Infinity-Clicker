@@ -54,6 +54,9 @@ function abbrNum(number) {
 }
 
 function update() {
+  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
+  document.getElementById("presoutpboos").innerText = "+" + (points / 1000) + "% boost";
+  
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - presshopcost);
   document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10 - presshopcost);
@@ -61,8 +64,8 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
-  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
-  document.getElementById("presoutpboos").innerText = "+" + (points / 1000) + "% boost";
+  document.getElementById("presshopstat").innerText = "Prestige: Shop price reduced: " + presshopcost;
+  document.getElementById("secondsstat").innerText = "Prestige: Score boost percentage: " + presboosperc + "%";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
