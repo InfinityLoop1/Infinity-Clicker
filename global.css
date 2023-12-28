@@ -10,7 +10,6 @@ body {
   justify-content: space-between;
   align-items: stretch;
   /*align-content: stretch;*/
-  gap: 15px;
 }
 #button {
   --buttoncolor1: #149CEA;
@@ -42,7 +41,6 @@ body {
   padding: 10px;
 }
 .clickcontainer {
-  width: 300px;
   border-bottom-right-radius: 20px;
   transform: translate(-10px, -10px);
 }
@@ -56,17 +54,14 @@ body {
   text-align: center;
   padding: 10px;
 }
-.upgcontainer, .prestigecontainer {
-  width: 300px;
+.upgcontainer, .statscontainer {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
 } 
-.statscontainer {
-  width: 400px;
+.prestigecontainer {
   border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  transform: translate(0px, -10px);
+  transform: translate(10px, -10px);
 } 
 body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   /* make it so people cannot select text */
