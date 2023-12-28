@@ -5,6 +5,7 @@ let cps = 0;
 let clicks = 0;
 let secondsplayed = 0;
 let presshopcost = 0;
+let prespercboos = 1;
 
 // Checks if game has been played and if there are no errors with localStorage. If true, retrieve values and put into game.
 let played = window.localStorage.getItem("played");
@@ -38,6 +39,11 @@ if (played === "true") {
   if (isNaN(presshopcost)) {
     presshopcost = 0;
   }
+
+  prespercboos = parseFloat(window.localStorage.getItem("prespercboos"));
+  if (isNaN(prespercboos)) {
+    prespercboos = 0;
+  }
 } else {
   window.localStorage.setItem("played", "true");
 }
@@ -55,7 +61,8 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
-  document.getElementById("presoutpshop").innerText = (-1 * (points / 1000)) + " cost to shop items";
+  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
+  document.getElementById("presoutpshop").innerText = "+" + (points / 10000) + "% boost";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
@@ -97,7 +104,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("presbuttshop").onclick = () => {
-  presshopcost += points / 1000;
+  presshopcost += points / 10000;
+  points = 0;
+  cpc = 1;
+  cps = 0;
+};
+
+document.getElementById("presbuttscor").onclick = () => {
+  prespercboos += points / 1000000;
   points = 0;
   cpc = 1;
   cps = 0;
