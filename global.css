@@ -51,8 +51,14 @@ body {
   text-align: center;
   padding: 10px;
 }
-.upgcontainer, .statscontainer, .prestigecontainer {
+.upgcontainer, .prestigecontainer {
   width: 300px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transform: translate(0px, -10px);
+} 
+.statscontainer {
+  width: 400px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
