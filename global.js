@@ -30,8 +30,8 @@ if (played === "true") {
   }
 
   secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
-  if (isNaN(clicks)) {
-    clicks = 0;
+  if (isNaN(secondsplayed)) {
+    secondsplayed = 0;
   }
 
   presshopcost = parseFloat(window.localStorage.getItem("presshopcost"));
