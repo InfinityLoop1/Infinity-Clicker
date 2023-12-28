@@ -9,7 +9,8 @@ body {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
-  align-content: stretch;
+  /*align-content: stretch;*/
+  gap: 15px;
 }
 #button {
   --buttoncolor1: #149CEA;
