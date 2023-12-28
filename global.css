@@ -5,7 +5,11 @@ body {
   background-color: #202020;
   color: #FFFFFF;
   display: flex;
-  gap: 15px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
 }
 #button {
   --buttoncolor1: #149CEA;
