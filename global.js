@@ -90,7 +90,7 @@ document.getElementById("button").onclick = () => {
 document.getElementById("upgcpc").onclick = () => {
   if (points >= cpc * 2 - presshopcost) {
     points = points - cpc * 2 - presshopcost;
-    cpc = cpc + 1;
+    cpc++;
     update();
   }
 };
@@ -98,7 +98,7 @@ document.getElementById("upgcpc").onclick = () => {
 document.getElementById("upgcps").onclick = () => {
   if (points >= cps * 5 + 10 - presshopcost) {
     points = points - (cps * 5 + 10 - presshopcost);
-    cps = cps + 0.5;
+    cps++;
     update();
   }
 };
