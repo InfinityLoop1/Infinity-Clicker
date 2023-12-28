@@ -65,7 +65,7 @@ function update() {
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
   document.getElementById("presshopstat").innerText = "Prestige: Shop price reduced: " + presshopcost;
-  document.getElementById("secondsstat").innerText = "Prestige: Score boost percentage: " + presboosperc + "%";
+  document.getElementById("secondsstat").innerText = "Prestige: Score boost percentage: " + presboosperc;
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
