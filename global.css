@@ -5,13 +5,7 @@ body {
   background-color: #202020;
   color: #FFFFFF;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
   gap: 15px;
-  
 }
 #button {
   --buttoncolor1: #149CEA;
@@ -37,12 +31,13 @@ body {
   font-size: 30px;
 }
 #container {
-  height: 80vh;
+  height: 100%;
   text-align: center;
   background-color: #303030;
   padding: 10px;
 }
 .clickcontainer {
+  width: 300px;
   border-bottom-right-radius: 20px;
   transform: translate(-10px, -10px);
 }
@@ -56,14 +51,17 @@ body {
   text-align: center;
   padding: 10px;
 }
-.upgcontainer, .statscontainer {
+.upgcontainer, .prestigecontainer {
+  width: 300px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   transform: translate(0px, -10px);
 } 
-.prestigecontainer {
+.statscontainer {
+  width: 400px;
+  border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  transform: translate(10px, -10px);
+  transform: translate(0px, -10px);
 } 
 body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   /* make it so people cannot select text */
