@@ -60,7 +60,7 @@ body {
   transform: translate(0px, -10px);
 } 
 .prestigecontainer {
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   transform: translate(10px, -10px);
 } 
 body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
