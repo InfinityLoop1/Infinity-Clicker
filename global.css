@@ -10,6 +10,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
+  gap: 15px;
   
 }
 #button {
