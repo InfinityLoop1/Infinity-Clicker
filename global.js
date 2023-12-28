@@ -64,8 +64,8 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
-  document.getElementById("presshopstat").innerText = "Prestige: Shop price reduced: " + presshopcost;
-  document.getElementById("secondsstat").innerText = "Prestige: Score boost percentage: " + presboosperc;
+  document.getElementById("presshopstat").innerText = "Prestige - Price reduced: " + presshopcost;
+  document.getElementById("presboosstat").innerText = "Prestige - Score boost: " + presboosperc + "%";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
