@@ -62,7 +62,7 @@ function update() {
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
   document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
-  document.getElementById("presoutpboos").innerText = "+" + (points / 10000) + "% boost";
+  document.getElementById("presoutpboos").innerText = "+" + (points / 100) + "% boost";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
@@ -111,7 +111,7 @@ document.getElementById("presbuttshop").onclick = () => {
 };
 
 document.getElementById("presbuttboos").onclick = () => {
-  prespercboos += points / 1000000;
+  prespercboos += points / 10000;
   points = 0;
   cpc = 1;
   cps = 0;
