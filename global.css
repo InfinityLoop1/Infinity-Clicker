@@ -51,6 +51,9 @@ body {
   text-align: center;
   padding: 10px;
 }
+.upg:active, .prestigebutton:active {
+  background-color: #606060;
+}
 .upgcontainer, .prestigecontainer {
   width: 300px;
   border-bottom-right-radius: 20px;
