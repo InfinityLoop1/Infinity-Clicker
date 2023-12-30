@@ -42,7 +42,7 @@ if (played === "true") {
 
   prespercboos = parseFloat(window.localStorage.getItem("prespercboos"));
   if (isNaN(prespercboos)) {
-    prespercboos = 0;
+    prespercboos = 1;
   }
 } else {
   window.localStorage.setItem("played", "true");
@@ -65,7 +65,7 @@ function update() {
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
   document.getElementById("presshopstat").innerText = "Prestige - Price reduced: " + presshopcost;
-  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + prespercboos + "%";
+  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + (prespercboos * 100) + "%";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
@@ -75,7 +75,7 @@ function update() {
 }
 
 function autoclick() {
-  points = points + cps;
+  points = points + cps * prespercboos;
   secondsplayed++;
   update();
 }
@@ -85,7 +85,7 @@ update();
 setInterval(autoclick, 1000);
 
 document.getElementById("button").onclick = () => {
-  points = points + cpc;
+  points = points + cpc * prespercboos;
   clicks++;
   update();
 };
