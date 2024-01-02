@@ -109,14 +109,14 @@ document.getElementById("upgcps").onclick = () => {
   }
 };
 
-document.getElementById("presbuttshop").onclick = () => {
+document.getElementById("prestigebutton_shop").onclick = () => {
   prestige_shopcost += parseFloat(points / 10000)
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
-document.getElementById("presbuttboos").onclick = () => {
+document.getElementById("prestigebutton_boost").onclick = () => {
   prestige_pointsboost += parseFloat(points / 100000)
   points = 0;
   cpc = 1;
