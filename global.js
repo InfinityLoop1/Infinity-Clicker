@@ -115,7 +115,7 @@ document.getElementById("prestigebuttonshop").onclick = () => {
 };
 
 document.getElementById("prestigebuttonboost").onclick = () => {
-  prestigepointsboost += (points / 1000000).toFixed(3);
+  prestigepointsboost += (points / 10000000).toFixed(3);
   points = 0;
   cpc = 1;
   cps = 0;
