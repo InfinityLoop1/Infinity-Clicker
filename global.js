@@ -110,14 +110,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("prestigebuttonshop").onclick = () => {
-  prestigeshopcost = prestigeshopcost + ((points / 10000).toFixed(3));
+  prestigeshopcost = prestigeshopcost + parseFloat(((points / 10000).toFixed(3)));
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
 document.getElementById("prestigebuttonboost").onclick = () => {
-  prestigepointsboost = prestigepointsboost + ((points / 100000).toFixed(3));
+  prestigepointsboost = prestigepointsboost + parseFloat(((points / 100000).toFixed(3)));
   points = 0;
   cpc = 1;
   cps = 0;
