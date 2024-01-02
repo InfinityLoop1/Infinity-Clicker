@@ -55,8 +55,8 @@ function abbrNum(number) {
 
 function update() {
   
-  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
-  document.getElementById("presoutpboos").innerText = "+" + (points / 1000) + "% boost";
+  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)).toFixed(3) + " cost to shop items";
+  document.getElementById("presoutpboos").innerText = "+" + (points / 1000).toFixed(3) + "% boost";
   
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - prestigeshopcost);
