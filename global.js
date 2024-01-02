@@ -54,8 +54,8 @@ function abbrNum(number) {
 }
 
 function update() {
-  prestigeshopcost = prestigeshopcost.toFixed(3);
-  prestigepointsboost = prestigepointsboost.toFixed(3);
+  //prestigeshopcost = prestigeshopcost.toFixed(3);
+  //prestigepointsboost = prestigepointsboost.toFixed(3);
   
   document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
   document.getElementById("presoutpboos").innerText = "+" + (points / 1000) + "% boost";
