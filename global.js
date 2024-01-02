@@ -54,8 +54,6 @@ function abbrNum(number) {
 }
 
 function update() {
-  //prestigeshopcost = prestigeshopcost.toFixed(3);
-  //prestigepointsboost = prestigepointsboost.toFixed(3);
   
   document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)) + " cost to shop items";
   document.getElementById("presoutpboos").innerText = "+" + (points / 1000) + "% boost";
@@ -67,8 +65,8 @@ function update() {
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
-  document.getElementById("presshopstat").innerText = "Prestige - Price reduced: " + prestigeshopcost;
-  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + (prestigepointsboost * 100) + "%";
+  document.getElementById("presshopstat").innerText = "Prestige - Price reduced: " + prestigeshopcost.toFixed(3);
+  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + (prestigepointsboost * 100).toFixed(3) + "%";
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
@@ -110,14 +108,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("prestigebuttonshop").onclick = () => {
-  prestigeshopcost += parseFloat(points / 10000)
+  prestigeshopcost += (points / 10000).toFixed(3);
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
 document.getElementById("prestigebuttonboost").onclick = () => {
-  prestigepointsboost += parseFloat(points / 100000)
+  prestigepointsboost += (points / 100000).toFixed(3);
   points = 0;
   cpc = 1;
   cps = 0;
