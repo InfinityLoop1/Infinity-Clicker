@@ -116,3 +116,7 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   backdrop-filter: blur(3px);
   z-index: 50;
 }
+
+.hidden {
+  display: none;
+}
