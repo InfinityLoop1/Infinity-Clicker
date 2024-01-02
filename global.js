@@ -66,13 +66,15 @@ function update() {
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
   document.getElementById("secondsstat").innerText = "Seconds played: " + abbrNum(secondsplayed);
   document.getElementById("presshopstat").innerText = "Prestige - Price reduced: " + prestigeshopcost.toFixed(3);
-  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + (prestigepointsboost * 100).toFixed(3) + "%";
+  document.getElementById("presboosstat").innerText = "Prestige - Score booster: " + prestigepointsboost;
 
   window.localStorage.setItem("points", points);
   window.localStorage.setItem("cpc", cpc);
   window.localStorage.setItem("cps", cps);
   window.localStorage.setItem("clicks", clicks);
   window.localStorage.setItem("secondsplayed", secondsplayed);
+  window.localStorage.setItem("prestigeshopcost", prestigeshopcost);
+  window.localStorage.setItem("prestigepointsboost", prestigepointsboost);
 }
 
 function autoclick() {
