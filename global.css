@@ -76,7 +76,7 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   user-select: none;
 }
 
-.modal {
+.prestige-modal {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,30 +92,19 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   z-index: 100;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.4rem;
-  font-weight: 700;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1em;
-}
-
-.btn-open {
+.prestige-btn-open {
   position: absolute;
   bottom: 150px;
 }
 
-.btn-close {
+.prestige-btn-close {
   transform: translate(10px, -20px);
   padding: 0.5rem 0.7rem;
   background: #eee;
   border-radius: 50%;
 }
 
-.overlay {
+.prestige-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
