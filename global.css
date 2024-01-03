@@ -101,7 +101,7 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   height: 50px;
   transform: translate(10px, -20px);
   padding: 0.5rem 0.7rem;
-  background: #eee;
+  background: #202020;
   border-radius: 50%;
 }
 
