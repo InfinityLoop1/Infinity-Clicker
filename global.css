@@ -127,4 +127,5 @@ button {
   background-color: #303030;
   color: white;
   border-radius: 10px;
+  border-style: none;
 }
