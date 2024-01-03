@@ -121,3 +121,10 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
 .hidden {
   display: none;
 }
+
+button {
+  height: 50px;
+  background-color: #303030;
+  color: white;
+  border-radius: 10px;
+}
