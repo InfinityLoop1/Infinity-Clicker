@@ -128,10 +128,10 @@ const prestigeModal = document.querySelector(".prestige-modal");
 const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
 const prestigeCloseModalBtn = document.querySelector(".prestige-btn-close");
 
-const openPrestigeModal = function () {
-  prestigeModal.classList.remove("hidden");
-  modalOverlay.classList.remove("hidden");
-};
+//const openPrestigeModal = function () {
+//  prestigeModal.classList.remove("hidden");
+//  modalOverlay.classList.remove("hidden");
+//};
 
 prestigeOpenModalBtn.addEventListener("click", openPrestigeModal);
 
