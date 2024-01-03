@@ -129,14 +129,14 @@ const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
 const prestigeCloseModalBtn = document.querySelector(".prestige-btn-close");
 
 const openPrestigeModal = function () {
-  prestigeModal.hidden = false;
+  prestigeModal.style.zIndex = "100";
   modalOverlay.hidden = false;
 };
 
 prestigeOpenModalBtn.addEventListener("click", openPrestigeModal);
 
 const closePrestigeModal = function () {
-  prestigeModal.hidden = true;
+  prestigeModal.style.zIndex = "-100";
   modalOverlay.hidden = true;
 };
 
