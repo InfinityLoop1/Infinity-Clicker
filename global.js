@@ -124,6 +124,7 @@ document.getElementById("prestigebuttonboost").onclick = () => {
 };
 
 const modalOverlay = document.querySelector(".modal-overlay");
+
 const prestigeModal = document.querySelector(".prestige-modal");
 const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
 const prestigeCloseModalBtn = document.querySelector(".prestige-btn-close");
@@ -140,6 +141,21 @@ const closePrestigeModal = function () {
   modalOverlay.hidden = true;
 };
 
-prestigeCloseModalBtn.addEventListener("click", closePrestigeModal);
+const statsModal = document.querySelector(".stats-modal");
+const statsOpenModalBtn = document.querySelector(".stats-btn-open");
+const statsCloseModalBtn = document.querySelector(".stats-btn-close");
 
-modalOverlay.addEventListener("click", closePrestigeModal);
+const openStatsModal = function () {
+  statsModal.style.zIndex = "100";
+  modalOverlay.hidden = false;
+};
+
+statsOpenModalBtn.addEventListener("click", openStatsModal);
+
+const closeStatsModal = function () {
+  statsModal.style.zIndex = "-100";
+  modalOverlay.hidden = true;
+};
+statsCloseModalBtn.addEventListener("click", closeStatsModal);
+
+modalOverlay.addEventListener("click", closeStatsModal);
