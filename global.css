@@ -12,6 +12,7 @@ back-cover {
   background-color: #202020;
   color: #FFFFFF;
   position: absolute;
+  z-index: -10;
 }
 
 button {
