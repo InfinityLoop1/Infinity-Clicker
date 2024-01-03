@@ -122,6 +122,8 @@ document.getElementById("prestigebuttonboost").onclick = () => {
   cps = 0;
 };
 
+
+//Modals
 const modalOverlay = document.querySelector(".modal-overlay");
 
 const closeModals = function () {
@@ -132,6 +134,7 @@ const closeModals = function () {
 
 modalOverlay.addEventListener("click", closeModals);
 
+//Prestige Modal
 const prestigeModal = document.querySelector(".prestige-modal");
 const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
 const prestigeCloseModalBtn = document.querySelector(".prestige-btn-close");
@@ -142,9 +145,9 @@ const openPrestigeModal = function () {
 };
 
 prestigeOpenModalBtn.addEventListener("click", openPrestigeModal);
-
 prestigeCloseModalBtn.addEventListener("click", closeModals);
 
+//Stats Modal
 const statsModal = document.querySelector(".stats-modal");
 const statsOpenModalBtn = document.querySelector(".stats-btn-open");
 const statsCloseModalBtn = document.querySelector(".stats-btn-close");
@@ -155,5 +158,4 @@ const openStatsModal = function () {
 };
 
 statsOpenModalBtn.addEventListener("click", openStatsModal);
-
 statsCloseModalBtn.addEventListener("click", closeModals);
