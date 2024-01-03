@@ -129,15 +129,15 @@ const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
 const prestigeCloseModalBtn = document.querySelector(".prestige-btn-close");
 
 const openPrestigeModal = function () {
-  prestigeModal.classList.remove("hidden");
-  modalOverlay.classList.remove("hidden");
+  prestigeModal.hidden = false;
+  modalOverlay.hidden = false;
 };
 
 prestigeOpenModalBtn.addEventListener("click", openPrestigeModal);
 
 const closePrestigeModal = function () {
-  prestigeModal.classList.add("hidden");
-  modalOverlay.classList.add("hidden");
+  prestigeModal.hidden = true;
+  modalOverlay.hidden = true;
 };
 
 prestigeCloseModalBtn.addEventListener("click", closePrestigeModal);
