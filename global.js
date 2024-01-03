@@ -54,10 +54,9 @@ function abbrNum(number) {
 }
 
 function update() {
-  
   document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)).toFixed(3) + " cost to shop items";
   document.getElementById("presoutpboos").innerText = "+" + (points / 1000).toFixed(3) + "% boost";
-  
+
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - prestigeshopcost);
   document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10 - prestigeshopcost);
@@ -110,14 +109,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("prestigebuttonshop").onclick = () => {
-  prestigeshopcost = prestigeshopcost + parseFloat(((points / 10000).toFixed(3)));
+  prestigeshopcost = prestigeshopcost + parseFloat((points / 10000).toFixed(3));
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
 document.getElementById("prestigebuttonboost").onclick = () => {
-  prestigepointsboost = prestigepointsboost + parseFloat(((points / 100000).toFixed(3)));
+  prestigepointsboost = prestigepointsboost + parseFloat((points / 100000).toFixed(3));
   points = 0;
   cpc = 1;
   cps = 0;
@@ -132,7 +131,6 @@ const closeModals = function () {
 };
 
 modalOverlay.addEventListener("click", closeModals);
-
 
 const prestigeModal = document.querySelector(".prestige-modal");
 const prestigeOpenModalBtn = document.querySelector(".prestige-btn-open");
