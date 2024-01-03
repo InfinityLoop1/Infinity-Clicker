@@ -58,7 +58,7 @@ button {
   border-bottom-right-radius: 20px;
   transform: translate(-10px, -10px);
 }
-.upg, .prestigebutton {
+.upg, .prestigebutton, #btn-open {
   background-color: #505050;
   width: 250px;
   border-radius: 2px;
@@ -68,7 +68,7 @@ button {
   text-align: center;
   padding: 10px;
 }
-.upg:active, .prestigebutton:active {
+.upg:active, .prestigebutton:active, #btn-open:active {
   background-color: #606060;
 }
 .upgcontainer, .modalbtncontainer {
