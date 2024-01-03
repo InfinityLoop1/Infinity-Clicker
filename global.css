@@ -8,6 +8,11 @@ body {
   gap: 15px;
 }
 
+back-cover {
+  background-color: #202020;
+  color: #FFFFFF;
+}
+
 button {
   height: 50px;
   background-color: #303030;
