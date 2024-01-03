@@ -123,23 +123,23 @@ document.getElementById("prestigebuttonboost").onclick = () => {
   cps = 0;
 };
 
-const overlay = document.querySelector(".modal-overlay");
-const prestigemodal = document.querySelector(".prestige-modal");
-const openModalBtn = document.querySelector(".prestige-btn-open");
-const closeModalBtn = document.querySelector(".prestige-btn-close");
+const modalOverlay = document.querySelector(".modal-overlay");
+const prestigeModal = document.querySelector(".prestige-modal");
+const prestigeOpenModal = document.querySelector(".prestige-btn-open");
+const prestigeCloseModal = document.querySelector(".prestige-btn-close");
 
-const openModal = function () {
-  prestigemodal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+const openPrestigeModal = function () {
+  prestigeModal.classList.remove("hidden");
+  modalOverlay.classList.remove("hidden");
 };
 
-openModalBtn.addEventListener("click", openModal);
+prestigeOpenModal.addEventListener("click", openPrestigeModal);
 
-const closeModal = function () {
-  prestigemodal.classList.add("hidden");
-  overlay.classList.add("hidden");
+const closePrestigeModal = function () {
+  prestigeModal.classList.add("hidden");
+  modalOverlay.classList.add("hidden");
 };
 
-closeModalBtn.addEventListener("click", closeModal);
+prestigeCloseModal.addEventListener("click", closePrestigeModal);
 
-overlay.addEventListener("click", closeModal);
+modalOverlay.addEventListener("click", closePrestigeModal);
