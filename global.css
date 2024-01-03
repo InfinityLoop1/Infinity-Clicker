@@ -90,7 +90,9 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   border: 1px solid #ddd;
   border-radius: 15px;
   z-index: 100;
-  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .prestige-btn-close {
