@@ -8,10 +8,6 @@ body {
   gap: 15px;
 }
 
-.hidden {
-  display: none;
-}
-
 button {
   height: 50px;
   background-color: #303030;
