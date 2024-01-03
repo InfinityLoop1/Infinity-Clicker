@@ -84,8 +84,8 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   width: 450px;
   padding: 1.3rem;
   min-height: 250px;
-  /*position: absolute;
-  top: 20%;*/
+  position: absolute;
+  /*top: 20%;*/
   background-color: #303030;
   border: 1px solid #ddd;
   border-radius: 15px;
