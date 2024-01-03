@@ -123,7 +123,7 @@ document.getElementById("prestigebuttonboost").onclick = () => {
   cps = 0;
 };
 
-const modalOverlay = document.querySelector(".modal-overlay");\
+const modalOverlay = document.querySelector(".modal-overlay");
 
 const closeModals = function () {
   prestigeModal.style.zIndex = "-100";
