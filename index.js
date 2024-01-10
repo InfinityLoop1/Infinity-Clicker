@@ -1,40 +1,37 @@
 // First, get localStorage values and checks if there are no errors with localStorage. If there is an error with localStorage, the value with the error is reset to the default value. If not, the value is set to the localStorage value.
-  points = parseFloat(window.localStorage.getItem("points"));
-  if (isNaN(points)) {
-    points = 0;
-  }
+points = parseFloat(window.localStorage.getItem("points"));
+if (isNaN(points)) {
+  points = 0;
+}
 
-  cpc = parseFloat(window.localStorage.getItem("cpc"));
-  if (isNaN(cpc)) {
-    cpc = 1;
-  }
+cpc = parseFloat(window.localStorage.getItem("cpc"));
+if (isNaN(cpc)) {
+  cpc = 1;
+}
 
-  cps = parseFloat(window.localStorage.getItem("cps"));
-  if (isNaN(cps)) {
-    cps = 0;
-  }
+cps = parseFloat(window.localStorage.getItem("cps"));
+if (isNaN(cps)) {
+  cps = 0;
+}
 
-  clicks = parseFloat(window.localStorage.getItem("clicks"));
-  if (isNaN(clicks)) {
-    clicks = 0;
-  }
+clicks = parseFloat(window.localStorage.getItem("clicks"));
+if (isNaN(clicks)) {
+  clicks = 0;
+}
 
-  secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
-  if (isNaN(secondsplayed)) {
-    secondsplayed = 0;
-  }
+secondsplayed = parseFloat(window.localStorage.getItem("secondsplayed"));
+if (isNaN(secondsplayed)) {
+  secondsplayed = 0;
+}
 
-  prestigeshopcost = parseFloat(window.localStorage.getItem("prestigeshopcost"));
-  if (isNaN(prestigeshopcost)) {
-    prestigeshopcost = 0;
-  }
+prestigeshopcost = parseFloat(window.localStorage.getItem("prestigeshopcost"));
+if (isNaN(prestigeshopcost)) {
+  prestigeshopcost = 0;
+}
 
-  prestigepointsboost = parseFloat(window.localStorage.getItem("prestigepointsboost"));
-  if (isNaN(prestigepointsboost)) {
-    prestigepointsboost = 1;
-  }
-} else {
-  window.localStorage.setItem("played", "true");
+prestigepointsboost = parseFloat(window.localStorage.getItem("prestigepointsboost"));
+if (isNaN(prestigepointsboost)) {
+  prestigepointsboost = 1;
 }
 
 function abbrNum(number) {
@@ -110,7 +107,6 @@ document.getElementById("prestigebuttonboost").onclick = () => {
   cpc = 1;
   cps = 0;
 };
-
 
 //Modals
 const modalOverlay = document.querySelector(".modal-overlay");
