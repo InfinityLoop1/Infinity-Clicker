@@ -1,6 +1,4 @@
-// First checks if the game has been played. If not, keep the original values. If yes, get localStorage values there are no errors with localStorage. If there is an error with localStorage, the value with the error is reset to the default value. If not, the value is set to the localStorage value.
-let played = window.localStorage.getItem("played");
-if (played === "true") {
+// First, get localStorage values and checks if there are no errors with localStorage. If there is an error with localStorage, the value with the error is reset to the default value. If not, the value is set to the localStorage value.
   points = parseFloat(window.localStorage.getItem("points"));
   if (isNaN(points)) {
     points = 0;
