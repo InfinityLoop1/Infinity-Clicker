@@ -49,8 +49,8 @@ function update() {
   }
     
   
-  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)).toFixed(3) + " cost to shop items";
-  document.getElementById("presoutpboos").innerText = "+" + (points / 1000).toFixed(3) + "% boost";
+  document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)).toFixed(0) + " cost to shop items";
+  document.getElementById("presoutpboos").innerText = "+" + (points / 1000).toFixed(0) + "% boost";
 
   document.getElementById("score").innerText = abbrNum(points);
   document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - prestigeshopcost) * buymult;
@@ -104,14 +104,14 @@ document.getElementById("upgcps").onclick = () => {
 };
 
 document.getElementById("prestigebuttonshop").onclick = () => {
-  prestigeshopcost = prestigeshopcost + parseFloat((points / 10000).toFixed(3));
+  prestigeshopcost = prestigeshopcost + parseFloat((points / 10000).toFixed(0));
   points = 0;
   cpc = 1;
   cps = 0;
 };
 
 document.getElementById("prestigebuttonboost").onclick = () => {
-  prestigepointsboost = prestigepointsboost + parseFloat((points / 100000).toFixed(3));
+  prestigepointsboost = prestigepointsboost + parseFloat((points / 100000).toFixed(0));
   points = 0;
   cpc = 1;
   cps = 0;
