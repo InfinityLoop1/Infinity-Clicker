@@ -164,7 +164,7 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: rgba(51, 65, 85, 1;
+  color: white;
   transition: all .15s ease-in-out;
 }
 
