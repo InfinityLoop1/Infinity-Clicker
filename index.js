@@ -40,12 +40,21 @@ function abbrNum(number) {
 }
 
 function update() {
+  if (document.getElementById('x100radio').checked) {
+    buymult = 100;
+  } else if (document.getElementById('x10radio').checked) {
+    buymult = 10;
+  } else {
+    buymult = 1;
+  }
+    
+  
   document.getElementById("presoutpshop").innerText = (-1 * (points / 10000)).toFixed(3) + " cost to shop items";
   document.getElementById("presoutpboos").innerText = "+" + (points / 1000).toFixed(3) + "% boost";
 
   document.getElementById("score").innerText = abbrNum(points);
-  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - prestigeshopcost);
-  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10 - prestigeshopcost);
+  document.getElementById("upgcpc").innerText = "Upgrade CPC: $" + (cpc * 2 - prestigeshopcost) * buymult;
+  document.getElementById("upgcps").innerText = "Upgrade CPS: $" + (cps * 5 + 10 - prestigeshopcost) * buymult;
   document.getElementById("cpcstat").innerText = "CPC: " + abbrNum(cpc);
   document.getElementById("cpsstat").innerText = "CPS: " + abbrNum(cps);
   document.getElementById("clicksstat").innerText = "Clicks: " + abbrNum(clicks);
@@ -79,7 +88,7 @@ document.getElementById("button").onclick = () => {
 };
 
 document.getElementById("upgcpc").onclick = () => {
-  if (points >= cpc * 2 - prestigeshopcost) {
+  if (points >= (cpc * 2 - prestigeshopcost) * buymult) {
     points = points - cpc * 2 - prestigeshopcost;
     cpc++;
     update();
@@ -87,7 +96,7 @@ document.getElementById("upgcpc").onclick = () => {
 };
 
 document.getElementById("upgcps").onclick = () => {
-  if (points >= cps * 5 + 10 - prestigeshopcost) {
+  if (points >= (cps * 5 + 10 - prestigeshopcost) * buymult) {
     points = points - (cps * 5 + 10 - prestigeshopcost);
     cps++;
     update();
@@ -140,3 +149,13 @@ const openStatsModal = function () {
 };
 
 statsOpenModalBtn.addEventListener("click", openStatsModal);
+
+document.getElementById("x1radio").onclick = () => {
+  update();
+};
+document.getElementById("x10radio").onclick = () => {
+  update();
+};
+document.getElementById("x100radio").onclick = () => {
+  update();
+};
