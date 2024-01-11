@@ -139,7 +139,7 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.5rem;
-  background-color: #EEE;
+  background-color: #404040;
   box-sizing: border-box;
   box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
   padding: 0.25rem;
@@ -164,11 +164,11 @@ body, h1, h2, h3, h4, h5, h6, a, p, div, li, button {
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: rgba(51, 65, 85, 1);
+  color: rgba(51, 65, 85, 0.1);
   transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked + .name {
-  background-color: #fff;
+  background-color: #000000;
   font-weight: 600;
 }
